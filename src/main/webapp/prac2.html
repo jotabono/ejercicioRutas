@@ -1,0 +1,21 @@
+<div>
+    <h1>Práctica Rutas</h1>
+    <span></span>
+
+<table class="table">
+    <input ng-model="canastasTop" class="form-control" type="text" placeholder=
+        "Introduce un número y saldrán los jugadores con esa cantidad de canastas y más." ng-change="jugadoresTop()"/>
+    <p>
+    <tr>
+        <td><b>Nombre</b></td>
+        <td><b>Canastas</b></td>
+    </tr>
+
+    <tr ng-repeat="x in jugadores">
+        <td ng-if="$odd" style="background-color:#f1f1f1">{{ x.nombreJugador }} </td>
+        <td ng-if="$even">{{ x.nombreJugador }} </td>
+        <td ng-if="$odd" style="background-color:#f1f1f1">{{ x.numCanastas }} </td>
+        <td ng-if="$even">{{ x.numCanastas }} </td>
+    </tr>
+</table>
+</div>
